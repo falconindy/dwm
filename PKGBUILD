@@ -35,3 +35,11 @@ md5sums=('a0b8a799ddc5034dd8a818c9bd76f3a3'
          'ef6e3ece9beaec2215ef341b685b1ec9')
 md5sums=('a0b8a799ddc5034dd8a818c9bd76f3a3'
          'e6276fece357ad4812dc052d31147920')
+md5sums=('a0b8a799ddc5034dd8a818c9bd76f3a3'
+         'e6276fece357ad4812dc052d31147920')
+md5sums=('a0b8a799ddc5034dd8a818c9bd76f3a3'
+         'e6276fece357ad4812dc052d31147920')
+md5sums=('a0b8a799ddc5034dd8a818c9bd76f3a3'
+         'e6276fece357ad4812dc052d31147920')
+md5sums=('a0b8a799ddc5034dd8a818c9bd76f3a3'
+         'e6276fece357ad4812dc052d31147920')
