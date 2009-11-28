@@ -15,8 +15,6 @@ depends=('libx11')
 install=dwm.install
 source=(http://code.suckless.org/dl/dwm/dwm-$pkgver.tar.gz \
 	config.h)
-md5sums=('a0b8a799ddc5034dd8a818c9bd76f3a3'
-         'dc9b535baf445d1c12854d1a2a56449f')
 
 build() {
   cd $srcdir/$pkgname-$pkgver
@@ -29,5 +27,3 @@ build() {
   install -m644 -D LICENSE $pkgdir/usr/share/licenses/$pkgname/LICENSE && \
   install -m644 -D README $pkgdir/usr/share/doc/$pkgname/README
 }
-md5sums=('a0b8a799ddc5034dd8a818c9bd76f3a3'
-         '139f126446987331a4d9229994f26522')
