@@ -28,4 +28,4 @@ build() {
   install -m644 -D README $pkgdir/usr/share/doc/$pkgname/README
 }
 md5sums=('a0b8a799ddc5034dd8a818c9bd76f3a3'
-         '0b55d95399758728a6a6c4778b729eef')
+         '92b0cf8178f12fa0308ba5e51418b649')
