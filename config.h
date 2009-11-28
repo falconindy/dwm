@@ -51,9 +51,15 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
-static const char *volup[] = { "amixer", "-q", "set", "PCM", "10+" };
-static const char *voldown[] = { "amixer", "-q", "set", "PCM", "10-" };
 
+/* General Sound */
+static const char *volup[] = { "amixer", "-q", "set", "PCM", "5+" };
+static const char *voldown[] = { "amixer", "-q", "set", "PCM", "5-" };
+
+/* ncmpcpp specific */
+static const char *mpcnext[] = { "ncmpcpp", "next" };
+static const char *mpcprev[] = { "ncmpcpp", "prev" };
+static const char *mpctoggle[] = { "ncmpcpp", "toggle" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -61,6 +67,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = volup } },
 	{ MODKEY,                       XK_z,      spawn,          {.v = voldown } },
+	{ MODKEY,                       XK_a,      spawn,          {.v = mpcprev } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = mpctoggle } },
+	{ MODKEY,                       XK_d,      spawn,          {.v = mpcnext } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
