@@ -27,3 +27,5 @@ build() {
   install -m644 -D LICENSE $pkgdir/usr/share/licenses/$pkgname/LICENSE && \
   install -m644 -D README $pkgdir/usr/share/doc/$pkgname/README
 }
+md5sums=('a0b8a799ddc5034dd8a818c9bd76f3a3'
+         '118936feb65d3c8b9dc34818375f0139')

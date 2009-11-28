@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-*-medium-*-*-*-14-*-*-*-*-*-*-*";
+static const char font[]            = "-*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#333333";
 static const char normbgcolor[]     = "#051121";
 static const char normfgcolor[]     = "#FFFFFF";
@@ -51,11 +51,16 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
+static const char *volup[] = { "amixer", "-q", "set", "PCM", "10+" };
+static const char *voldown[] = { "amixer", "-q", "set", "PCM", "10-" };
+
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_x,      spawn,          {.v = volup } },
+	{ MODKEY,                       XK_z,      spawn,          {.v = voldown } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
