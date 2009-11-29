@@ -21,6 +21,7 @@ static const Rule rules[] = {
 	{ "chrome",              NULL,       NULL,       1 << 0,            False,       -1 },
 	{ "URxvt",               NULL,       NULL,       1 << 1,            False,       -1 },
 	{ "Pidgin",              NULL,       NULL,       1 << 2,            True,        -1 },
+	{ "Hamster-applet",      NULL,       NULL,       1 << 2,            True,        -1 },
 	{ "VirtualBox",          NULL,       NULL,       1 << 3,            True,        -1 },
 	{ "OpenOffice.org 3.1",  NULL,       NULL,       1 << 4,            False,       -1 },
 	{ "Gimp",                NULL,       NULL,       1 << 4,            True,        -1 },
