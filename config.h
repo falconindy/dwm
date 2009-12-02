@@ -1,13 +1,17 @@
 /* See LICENSE file for copyright and license details. */
 
+/* Addons */
+#include "push.c"
+
 /* appearance */
-static const char font[]            = "-*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*";
+//static const char font[]            = "-*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*";
+static const char font[]            = "-*-bitstream vera sans mono-medium-r-normal-*-10-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#333333";
-static const char normbgcolor[]     = "#051121";
-static const char normfgcolor[]     = "#FFFFFF";
-static const char selbordercolor[]  = "#3465A4";
-static const char selbgcolor[]      = "#3465A4";
-static const char selfgcolor[]      = "#FFFFFF";
+static const char normbgcolor[]     = "#051121"; 
+static const char normfgcolor[]     = "#FFFFFF"; 
+static const char selbordercolor[]  = "#F6EE09"; /* "#3465A4"; */
+static const char selbgcolor[]      = "#3465A4"; 
+static const char selfgcolor[]      = "#FFFFFF"; 
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
@@ -18,14 +22,16 @@ static const char *tags[] = { "web", "term", "pidgin", "vbox", "misc" };
 
 static const Rule rules[] = {
 	/* class                 instance    title       tags mask     isfloating   monitor */
-	{ "chrome",              NULL,       NULL,       1 << 0,            False,       -1 },
+	{ "Firefox",             NULL,       NULL,       1 << 0,            True,        -1 },
+	{ "Chrome",              NULL,       NULL,       1 << 0,            True,        -1 },
 	{ "URxvt",               NULL,       NULL,       1 << 1,            False,       -1 },
 	{ "Pidgin",              NULL,       NULL,       1 << 2,            True,        -1 },
 	{ "Hamster-applet",      NULL,       NULL,       1 << 2,            True,        -1 },
 	{ "VirtualBox",          NULL,       NULL,       1 << 3,            True,        -1 },
 	{ "OpenOffice.org 3.1",  NULL,       NULL,       1 << 4,            False,       -1 },
 	{ "Gimp",                NULL,       NULL,       1 << 4,            True,        -1 },
-	{ "mplayer",             NULL,       NULL,       1 << 4,            True,        -1 },
+	{ "MPlayer",             NULL,       NULL,       1 << 4,            True,        -1 },
+	{ "Pymp.pyc",            NULL,       NULL,       1 << 3,            True,        -1 },
 };
 
 /* layout(s) */
@@ -101,6 +107,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ControlMask,           XK_k,      pushdown,       {0} },
+	{ MODKEY|ControlMask,           XK_j,      pushup,         {0} },
 };
 
 /* button definitions */
