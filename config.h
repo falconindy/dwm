@@ -63,6 +63,9 @@ static const char *mpcnext[] = { "mpc", "next", NULL };
 static const char *mpcprev[] = { "mpc", "prev", NULL };
 static const char *mpctoggle[] = { "mpc", "toggle", NULL };
 
+/* Screen lock */
+static const char *xscreenlock[] = { "xscreensaver-command", "-lock", NULL };
+
 static Key keys[] = {
     /* modifier                     key        function        argument */
     { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -72,6 +75,7 @@ static Key keys[] = {
     { MODKEY,                       XK_q,      spawn,          {.v = mpcprev } },
     { MODKEY,                       XK_w,      spawn,          {.v = mpctoggle } },
     { MODKEY,                       XK_e,      spawn,          {.v = mpcnext } },
+    { MODKEY|ControlMask,           XK_l,      spawn,          {.v = xscreenlock } },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_k,      focusstack,     {.i = +1 } },
     { MODKEY,                       XK_j,      focusstack,     {.i = -1 } },
