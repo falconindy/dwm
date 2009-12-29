@@ -58,10 +58,10 @@ static const char *termcmd[]  = { "urxvtc", NULL };
 static const char *volup[] = { "amixer", "-q", "set", "PCM", "5+" };
 static const char *voldown[] = { "amixer", "-q", "set", "PCM", "5-" };
 
-/* ncmpcpp shortcuts */
-static const char *mpcnext[] = { "ncmpcpp", "next" };
-static const char *mpcprev[] = { "ncmpcpp", "prev" };
-static const char *mpctoggle[] = { "ncmpcpp", "toggle" };
+/* mpd shortcuts */
+static const char *mpcnext[] = { "mpc", "next", NULL };
+static const char *mpcprev[] = { "mpc", "prev", NULL };
+static const char *mpctoggle[] = { "mpc", "toggle", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
