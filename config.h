@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-//static const char font[]            = "-*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*";
-static const char font[]            = "Terminus 8";
+static const char font[]            = "-*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*";
+//static const char font[]            = "-*-bitstream vera sans mono-medium-r-normal-*-10-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#333333";
 static const char normbgcolor[]     = "#051121"; 
 static const char normfgcolor[]     = "#FFFFFF"; 
@@ -19,9 +19,10 @@ static const char *tags[] = { "web", "term", "pidgin", "vbox", "misc" };
 
 static const Rule rules[] = {
     /* class                 instance    title       tags mask     isfloating   monitor */
-    { "Chromium-browser",    NULL,       NULL,       1 << 0,            False,       -1 }, 
+    { "Chromium-browser",    NULL,       NULL,       1 << 0,            False,        -1 },
     { "URxvt",               NULL,       NULL,       1 << 1,            False,       -1 },
     { "Pidgin",              NULL,       NULL,       1 << 2,            True,        -1 },
+    { "Pymp.pyc",            NULL,       NULL,       1 << 3,            True,        -1 },
     { "VirtualBox",          NULL,       NULL,       1 << 3,            True,        -1 },
     { "OpenOffice.org 3.1",  NULL,       NULL,       1 << 4,            False,       -1 },
     { "Gimp",                NULL,       NULL,       1 << 4,            True,        -1 },
