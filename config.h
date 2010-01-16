@@ -55,8 +55,11 @@ static const char *dmenucmd[] = { "dmenu_run", "-b", "-fn", font, "-nb", normbgc
 static const char *termcmd[]  = { "urxvtc", NULL };
 
 /* General Sound */
-static const char *volup[] = { "amixer", "-q", "set", "PCM", "5+" };
-static const char *voldown[] = { "amixer", "-q", "set", "PCM", "5-" };
+//static const char *volup[] = { "amixer", "-q", "set", "PCM", "5+" };
+//static const char *voldown[] = { "amixer", "-q", "set", "PCM", "5-" };
+
+static const char *volup[] = { "volOSD", "up", "5" };
+static const char *voldown[] = { "volOSD", "down", "5" };
 
 /* mpd shortcuts */
 static const char *mpcnext[] = { "mpc", "next", NULL };
