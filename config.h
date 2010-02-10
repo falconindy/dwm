@@ -19,7 +19,7 @@ static const char *tags[] = { "web", "term", "deluge", "vbox", "misc" };
 
 static const Rule rules[] = {
     /* class                 instance    title       tags mask     isfloating   monitor */
-    { "Chromium-browser",    NULL,       NULL,       1 << 0,            False,       -1 },
+    { "Chromium",            NULL,       NULL,       1 << 0,            False,       -1 },
     { "URxvt",               NULL,       NULL,       1 << 1,            False,       -1 },
     { "Deluge",              NULL,       NULL,       1 << 2,            True,        -1 },
     { "VirtualBox",          NULL,       NULL,       1 << 3,            True,        -1 },
