@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*";
-//static const char font[]            = "-*-bitstream vera sans mono-medium-r-normal-*-10-*-*-*-*-*-*-*";
+//static const char font[]            = "-*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*";
+static const char font[]            = "-*-nu-*-*-*-*-11-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#333333";
 static const char normbgcolor[]     = "#051121"; 
 static const char normfgcolor[]     = "#FFFFFF"; 
