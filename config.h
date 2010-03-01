@@ -15,13 +15,12 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "web", "term", "deluge", "vbox", "misc" };
+static const char *tags[] = { "web", "term", "foo", "vbox", "misc" };
 
 static const Rule rules[] = {
     /* class                 instance    title       tags mask     isfloating   monitor */
     { "Chromium",            NULL,       NULL,       1 << 0,            False,       -1 },
     { "URxvt",               NULL,       NULL,       1 << 1,            False,       -1 },
-    { "Deluge",              NULL,       NULL,       1 << 2,            True,        -1 },
     { "VirtualBox",          NULL,       NULL,       1 << 3,            True,        -1 },
     { "Dia",                 NULL,       NULL,       1 << 4,            True,        -1 },
     { "Gimp",                NULL,       NULL,       1 << 4,            True,        -1 },
