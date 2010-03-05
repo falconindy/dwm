@@ -24,7 +24,7 @@ static const Rule rules[] = {
     { "VirtualBox",          NULL,       NULL,       1 << 3,            True,        -1 },
     { "Dia",                 NULL,       NULL,       1 << 4,            True,        -1 },
     { "Gimp",                NULL,       NULL,       1 << 4,            True,        -1 },
-    { "OpenOffice.org 3.1",  NULL,       NULL,       1 << 4,            False,       -1 },
+    { "OpenOffice.org 3.2",  NULL,       NULL,       1 << 4,            False,       -1 },
 };
 
 /* layout(s) */
@@ -57,15 +57,15 @@ static const char *termcmd[]  = { "urxvtc", NULL };
 //static const char *volup[] = { "amixer", "-q", "set", "PCM", "5+" };
 //static const char *voldown[] = { "amixer", "-q", "set", "PCM", "5-" };
 
-static const char *volup[] = { "volOSD", "up", "5" };
-static const char *voldown[] = { "volOSD", "down", "5" };
+static const char *volup[]     = { "volOSD",    "up",       "5" };
+static const char *voldown[]   = { "volOSD",    "down",     "5" };
 
 /* mpd shortcuts */
-static const char *mpcnext[] = { "mpc", "next", NULL };
-static const char *mpcprev[] = { "mpc", "prev", NULL };
-static const char *mpctoggle[] = { "mpc", "toggle", NULL };
+static const char *mpcnext[]   = { "mpc",       "next",     NULL };
+static const char *mpcprev[]   = { "mpc",       "prev",     NULL };
+static const char *mpctoggle[] = { "mpc",       "toggle",   NULL };
 
-/* Screen lock */
+/* screen lock */
 static const char *xscreenlock[] = { "xscreensaver-command", "-lock", NULL };
 
 static Key keys[] = {
