@@ -14,7 +14,6 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
-static const unsigned int gappx    = 4;           /* gap pixel between windows */
 
 /* tagging */
 static const char *tags[] = { "web", "term", "foo", "vbox", "misc" };
@@ -22,7 +21,6 @@ static const char *tags[] = { "web", "term", "foo", "vbox", "misc" };
 static const Rule rules[] = {
     /* class                 instance    title       tags mask     isfloating   monitor */
     { "Chromium",            NULL,       NULL,       1 << 0,            False,       -1 },
-    { "URxvt",               NULL,       NULL,       1 << 1,            False,       -1 },
     { "VirtualBox",          NULL,       NULL,       1 << 3,            True,        -1 },
     { "Dia",                 NULL,       NULL,       1 << 4,            True,        -1 },
     { "Gimp",                NULL,       NULL,       1 << 4,            True,        -1 },

@@ -1336,10 +1336,10 @@ resize(Client *c, int x, int y, int w, int h, Bool interact) {
 	XWindowChanges wc;
 
 	if(applysizehints(c, &x, &y, &w, &h, interact)) {
-		c->x = wc.x = x + gappx;
-		c->y = wc.y = y + gappx;
-		c->w = wc.width = w - 2 * gappx ;
-		c->h = wc.height = h - 2 * gappx ;
+		c->x = wc.x = x;
+		c->y = wc.y = y;
+		c->w = wc.width = w;
+		c->h = wc.height = h;
 		wc.border_width = c->bw;
 		XConfigureWindow(dpy, c->win, CWX|CWY|CWWidth|CWHeight|CWBorderWidth, &wc);
 		configure(c);
