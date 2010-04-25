@@ -58,8 +58,8 @@ static const char *termcmd[]  = { "urxvtc", NULL };
 //static const char *volup[] = { "amixer", "-q", "set", "PCM", "5+" };
 //static const char *voldown[] = { "amixer", "-q", "set", "PCM", "5-" };
 
-static const char *volup[]     = { "volOSD",    "up",       "5" };
-static const char *voldown[]   = { "volOSD",    "down",     "5" };
+static const char *volup[]     = { "volOSD",    "+",        "5" };
+static const char *voldown[]   = { "volOSD",    "-",        "5" };
 
 /* mpd shortcuts */
 static const char *mpcnext[]   = { "mpc",       "next",     NULL };
