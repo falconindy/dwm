@@ -52,7 +52,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_launch.sh", NULL };
 static const char *termcmd[] = { "urxvtc", NULL };
-static const char *scratchpadcmd[] = { "urxvt", "-name", "Scratchpad", "-geometry", "1200x15", NULL };
+static const char *scratchpadcmd[] = { "urxvt", "-name", "Scratchpad", "-geometry", "273x15", NULL };
 
 static const char *volup[]     = { "volOSD",    "+",        "5" };
 static const char *voldown[]   = { "volOSD",    "-",        "5" };
