@@ -1,8 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-
 /* appearance */
-//static const char font[]            = "-*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*";
 static const char font[]            = "-*-nu-*-*-*-*-11-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#333333";
 static const char normbgcolor[]     = "#051121"; 
@@ -16,15 +14,16 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "web", "term", "foo", "vbox", "misc" };
+static const char *tags[] = { "web", "term", "foo", "vbox", "misc", "s" };
 
 static const Rule rules[] = {
-    /* class                 instance    title       tags mask     isfloating   monitor */
-    { "Chromium",            NULL,       NULL,       1 << 0,            False,       -1 },
-    { "VirtualBox",          NULL,       NULL,       1 << 3,            True,        -1 },
-    { "Dia",                 NULL,       NULL,       1 << 4,            True,        -1 },
-    { "Gimp",                NULL,       NULL,       1 << 4,            True,        -1 },
-    { "OpenOffice.org 3.2",  NULL,       NULL,       1 << 4,            False,       -1 },
+    /* class                 instance       title           tags mask     isfloating   monitor */
+    { "Chromium",            NULL,          NULL,           1 << 0,        False,       -1 },
+    { "VirtualBox",          NULL,          NULL,           1 << 3,        True,        -1 },
+    { "Dia",                 NULL,          NULL,           1 << 4,        True,        -1 },
+    { "Gimp",                NULL,          NULL,           1 << 4,        True,        -1 },
+    { "OpenOffice.org 3.2",  NULL,          NULL,           1 << 4,        False,       -1 },
+    { "URxvt",               "Scratchpad",  "Scratchpad",   1 << 5,        True,        -1 },
 };
 
 /* layout(s) */
@@ -51,12 +50,9 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-i", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "urxvtc", NULL };
-
-/* General Sound */
-//static const char *volup[] = { "amixer", "-q", "set", "PCM", "5+" };
-//static const char *voldown[] = { "amixer", "-q", "set", "PCM", "5-" };
+static const char *dmenucmd[] = { "dmenu_launch.sh", NULL };
+static const char *termcmd[] = { "urxvtc", NULL };
+static const char *scratchpadcmd[] = { "urxvt", "-name", "Scratchpad", "-geometry", "1200x15", NULL };
 
 static const char *volup[]     = { "volOSD",    "+",        "5" };
 static const char *voldown[]   = { "volOSD",    "-",        "5" };
@@ -71,6 +67,8 @@ static const char *xscreenlock[] = { "xscreensaver-command", "-lock", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
+    { MODKEY|ControlMask,           XK_s,      spawn,          {.v = scratchpadcmd } },
+    { MODKEY,                       XK_s,      toggleview,     {.ui = 1 << 5} },
     { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
     { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_x,      spawn,          {.v = volup } },
