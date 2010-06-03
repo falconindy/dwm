@@ -68,7 +68,7 @@ static const char *xscreenlock[] = { "xscreensaver-command", "-lock", NULL };
 static Key keys[] = {
     /* modifier                     key        function        argument */
     { MODKEY|ControlMask,           XK_s,      spawn,          {.v = scratchpadcmd } },
-    { MODKEY,                       XK_s,      toggleview,     {.ui = 1 << 5} },
+    { MODKEY,                       XK_grave,  toggleview,     {.ui = 1 << 5} },
     { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
     { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_x,      spawn,          {.v = volup } },
