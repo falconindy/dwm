@@ -18,7 +18,7 @@ static const char *tags[] = { "web", "term", "foo", "vbox", "misc", "s" };
 
 static const Rule rules[] = {
     /* class                 instance       title           tags mask     isfloating   monitor */
-    { "Chromium",            NULL,          NULL,           1 << 0,        False,       -1 },
+    { "Uzbl-tabbed",         NULL,          NULL,           1 << 0,        False,       -1 },
     { "VirtualBox",          NULL,          NULL,           1 << 3,        True,        -1 },
     { "Dia",                 NULL,          NULL,           1 << 4,        True,        -1 },
     { "Gimp",                NULL,          NULL,           1 << 4,        True,        -1 },
@@ -54,8 +54,8 @@ static const char *dmenucmd[] = { "dmenu_launch.sh", NULL };
 static const char *termcmd[] = { "urxvtc", NULL };
 static const char *scratchpadcmd[] = { "urxvt", "-name", "Scratchpad", "-geometry", "273x15", NULL };
 
-static const char *volup[]     = { "volOSD",    "+",        "5" };
-static const char *voldown[]   = { "volOSD",    "-",        "5" };
+static const char *volup[]     = { "volOSD",   "pcm2",  "+5" };
+static const char *voldown[]   = { "volOSD",   "pcm2",  "-5" };
 
 /* mpd shortcuts */
 static const char *mpcnext[]   = { "mpc",       "next",     NULL };
