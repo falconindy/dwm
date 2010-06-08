@@ -3,11 +3,11 @@
 /* appearance */
 static const char font[]            = "-*-nu-*-*-*-*-11-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#333333";
-static const char normbgcolor[]     = "#051121"; 
-static const char normfgcolor[]     = "#FFFFFF"; 
-static const char selbordercolor[]  = "#F6EE09";
-static const char selbgcolor[]      = "#3465A4"; 
-static const char selfgcolor[]      = "#FFFFFF"; 
+static const char normbgcolor[]     = "#262729"; 
+static const char normfgcolor[]     = "#ffffff"; 
+static const char selbordercolor[]  = "#f6ee09";
+static const char selbgcolor[]      = "#262729"; 
+static const char selfgcolor[]      = "#659fdb"; 
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
