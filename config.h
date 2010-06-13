@@ -57,8 +57,9 @@ static const char *dmenucmd[] = { "dmenu_launch.sh", NULL };
 static const char *termcmd[] = { "urxvtc", NULL };
 static const char *scratchpadcmd[] = { "urxvt", "-name", "Scratchpad", "-geometry", "273x15", NULL };
 
-static const char *volup[]     = { "volOSD",   "pcm2",  "+5" };
-static const char *voldown[]   = { "volOSD",   "pcm2",  "-5" };
+static const char *volup[]      = { "volOSD",   "pcm2",  "+5"     };
+static const char *voldown[]    = { "volOSD",   "pcm2",  "-5"     };
+static const char *voltoggle[]  = { "volOSD",   "pcm2",  "toggle" };
 
 /* mpd shortcuts */
 static const char *mpcnext[]   = { "mpc",       "next",     NULL };
@@ -76,6 +77,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_x,      spawn,          {.v = volup } },
     { MODKEY,                       XK_z,      spawn,          {.v = voldown } },
+    { MODKEY,                       XK_c,      spawn,          {.v = voltoggle } },
     { MODKEY,                       XK_q,      spawn,          {.v = mpcprev } },
     { MODKEY,                       XK_w,      spawn,          {.v = mpctoggle } },
     { MODKEY,                       XK_e,      spawn,          {.v = mpcnext } },
