@@ -53,26 +53,27 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_launch.sh", NULL };
-static const char *termcmd[] = { "urxvtc", NULL };
+static const char *dmenucmd[]      = { "dmenu_launch.sh", NULL };
+static const char *termcmd[]       = { "urxvtc", NULL };
 static const char *scratchpadcmd[] = { "urxvt", "-name", "Scratchpad", "-geometry", "273x15", NULL };
+static const char *printscrncmd[]  = { "printscreen.sh", NULL };
 
-static const char *volup[]      = { "volOSD",   "pcm2",  "+5"     };
-static const char *voldown[]    = { "volOSD",   "pcm2",  "-5"     };
-static const char *voltoggle[]  = { "volOSD",   "pcm2",  "toggle" };
-
-/* mpd shortcuts */
-static const char *mpcnext[]   = { "mpc",       "next",     NULL };
-static const char *mpcprev[]   = { "mpc",       "prev",     NULL };
-static const char *mpctoggle[] = { "mpc",       "toggle",   NULL };
+/* audio */
+static const char *volup[]         = { "volOSD", "pcm2", "+5", NULL };
+static const char *voldown[]       = { "volOSD", "pcm2", "-5", NULL };
+static const char *voltoggle[]     = { "volOSD", "pcm2", "toggle", NULL };
+static const char *mpcnext[]       = { "mpc", "next", NULL };
+static const char *mpcprev[]       = { "mpc", "prev", NULL };
+static const char *mpctoggle[]     = { "mpc", "toggle", NULL };
 
 /* screen lock */
-static const char *xscreenlock[] = { "xscreensaver-command", "-lock", NULL };
+static const char *xscreenlock[]   = { "xscreensaver-command", "-lock", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
     { MODKEY|ControlMask,           XK_s,      spawn,          {.v = scratchpadcmd } },
     { MODKEY,                       XK_grave,  toggleview,     {.ui = 1 << 5} },
+    { MODKEY,                       XK_Print,  spawn,          {.v = printscrncmd } },
     { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
     { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_x,      spawn,          {.v = volup } },
