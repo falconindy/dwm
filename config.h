@@ -27,6 +27,7 @@ static const Rule rules[] = {
     { "Gimp",                NULL,          NULL,           1 << 4,        True,        -1 },
     { "OpenOffice.org 3.2",  NULL,          NULL,           1 << 4,        False,       -1 },
     { "URxvt",               "Scratchpad",  "Scratchpad",   1 << 5,        True,        -1 },
+    { "Zenity",              NULL,          NULL,           0,             True,        -1 },
 };
 
 /* layout(s) */
