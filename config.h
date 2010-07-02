@@ -60,9 +60,9 @@ static const char *scratchpadcmd[] = { "urxvt", "-name", "Scratchpad", "-geometr
 static const char *printscrncmd[]  = { "printscreen.sh", NULL };
 
 /* audio */
-static const char *volup[]         = { "volOSD", "pcm2", "+5", NULL };
-static const char *voldown[]       = { "volOSD", "pcm2", "-5", NULL };
-static const char *voltoggle[]     = { "volOSD", "pcm2", "toggle", NULL };
+static const char *volup[]         = { "volOSD", "alsa", "PCM", "+5", NULL };
+static const char *voldown[]       = { "volOSD", "alsa", "PCM", "-5", NULL };
+static const char *voltoggle[]     = { "volOSD", "alsa", "PCM", "toggle", NULL };
 static const char *mpcnext[]       = { "mpc", "next", NULL };
 static const char *mpcprev[]       = { "mpc", "prev", NULL };
 static const char *mpctoggle[]     = { "mpc", "toggle", NULL };
