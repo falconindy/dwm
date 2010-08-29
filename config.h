@@ -18,14 +18,13 @@ static const char *tags[] = { "web", "term", "foo", "vbox", "misc", "s" };
 
 static const Rule rules[] = {
     /* class                 instance       title           tags mask     isfloating   monitor */
-    { "Jumanji",             NULL,          NULL,           1 << 0,        False,       -1 },
+    { "Chromium",            NULL,          NULL,           1 << 0,        False,       -1 },
+    { "URxvt",               "werk",        NULL,           1 << 1,        False,       -1 },
     { "URxvt",               "tmux",        NULL,           1 << 1,        False,       -1 },
     { "URxvt",               "htop",        NULL,           1 << 2,        False,       -1 },
     { "URxvt",               "ncmpcpp",     NULL,           1 << 2,        False,       -1 },
     { "VirtualBox",          NULL,          NULL,           1 << 3,        True,        -1 },
     { "qemu",                NULL,          NULL,           1 << 3,        True,        -1 },
-    { "Dia",                 NULL,          NULL,           1 << 4,        True,        -1 },
-    { "Gimp",                NULL,          NULL,           1 << 4,        True,        -1 },
     { "OpenOffice.org 3.2",  NULL,          NULL,           1 << 4,        False,       -1 },
     { "URxvt",               "Scratchpad",  "Scratchpad",   1 << 5,        True,        -1 },
     { "Zenity",              NULL,          NULL,           0,             True,        -1 },
